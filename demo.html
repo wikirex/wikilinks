@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>wikilinks Demo</title>
+
+<link rel="stylesheet" href="jquery.wikirex.links.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+<script src="jquery.wikirex.links.js"></script>
+
+<script>
+$(document).ready(function(){
+  var data = '[["Title 1","Value 1"],["Title 2","Value 2"]]';
+  data = $.parseJSON(data);
+  $('#banners').wikilinks({
+      number: 2, 
+      data: data, //JSON object
+      class: ['', 'photo'], 
+      on_add: added_callback
+  });
+  
+  $('#bt_show').on('click', function(e){
+	  alert($('#banners').wikilinks('get_data'));
+  });
+});
+
+function added_callback(){
+  var $wrap = $(this);
+}
+</script>
+</head>
+
+<body>
+<div id="banners"></div>
+
+<button type="button" id="bt_show">Show Data</button>
+</body>
+</html>
