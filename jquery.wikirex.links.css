@@ -1,0 +1,8 @@
+.wikirex_links_placeholder{border:dashed 2px #F90; height:80px;}
+
+.wikilinks .wikilinks_wrapper{margin:0 0 10px 0; padding:5px;}
+.wikilinks .wikilinks_wrapper.selected{background:#F0F0F0; border-radius:5px;}
+.wikilinks .wikilinks_wrapper td.wikilink_label{width:20%;}
+.wikilinks input{padding:3px; border-radius:3px;}
+.wikilinks input[type="text"]{margin:0 0 3px 0; width:95%;}
+.wikilinks textarea{margin:0 0 3px 0; width:94%;}
