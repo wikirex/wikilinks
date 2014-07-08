@@ -24,9 +24,13 @@ $(document).ready(function(){
       class: ['', 'photo'], 
       on_add: added_callback
   });
-}
+});
 
 function added_callback(){
   var $wrap = $(this);
 }
+```
+
+```html
+<div id="banners"></div>
 ```
